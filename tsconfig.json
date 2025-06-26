@@ -2,5 +2,30 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./packages/text-adventure-client-api-e2e"
+    },
+    {
+      "path": "./packages/text-adventure-client-api"
+    },
+    {
+      "path": "./packages/text-adventure-editor-api-e2e"
+    },
+    {
+      "path": "./packages/text-adventure-editor-api"
+    },
+    {
+      "path": "./packages/text-adventure-client-ui-e2e"
+    },
+    {
+      "path": "./packages/text-adventure-client-ui"
+    },
+    {
+      "path": "./packages/text-adventure-editor-ui-e2e"
+    },
+    {
+      "path": "./packages/text-adventure-editor-ui"
+    }
+  ]
 }
