@@ -1,0 +1,51 @@
+services:
+  # Client API Service
+  client-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: client-api
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+
+  # Editor API Service  
+  editor-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: editor-api
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    restart: unless-stopped
+
+  # Client UI Service
+  client-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: client-ui
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  # Editor UI Service
+  editor-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: editor-ui
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: textadventure-network
+    driver: bridge
