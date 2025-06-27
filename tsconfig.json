@@ -26,6 +26,9 @@
     },
     {
       "path": "./packages/text-adventure-editor-ui"
+    },
+    {
+      "path": "./libs/database"
     }
   ]
 }

@@ -9,4 +9,9 @@ export class AppController {
   getData() {
     return this.appService.getData();
   }
+
+  @Get('health/db')
+  async checkDatabaseHealth() {
+    return this.appService.checkDatabaseHealth();
+  }
 }
