@@ -6,6 +6,78 @@
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
+## 🐳 Docker Support
+
+This project includes Docker support for containerized deployment with docker-compose.
+
+### Prerequisites
+
+- Docker (version 20.10 or higher)
+- Docker Compose (version 2.0 or higher)
+
+### Quick Start with Docker
+
+1. **Build the applications** (required before Docker containerization):
+   ```sh
+   npm install
+   npx nx run-many --target=build --all
+   ```
+
+2. **Build and start all services**:
+   ```sh
+   docker compose up --build
+   ```
+
+3. **Access the applications**:
+   - Client API: http://localhost:3000/api
+   - Editor API: http://localhost:3001/api
+   - Client UI: http://localhost:8080
+   - Editor UI: http://localhost:8081
+
+### Docker Commands
+
+- **Build all services**: `docker compose build`
+- **Start all services**: `docker compose up`
+- **Start services in background**: `docker compose up -d`
+- **Stop all services**: `docker compose down`
+- **View logs**: `docker compose logs`
+- **Restart services**: `docker compose restart`
+
+### Individual Service Management
+
+You can also run individual services:
+
+```sh
+# Run only the client API
+docker compose up client-api
+
+# Run only the client UI
+docker compose up client-ui
+
+# Run API services only
+docker compose up client-api editor-api
+```
+
+### Service Architecture
+
+The Docker setup includes four main services:
+
+- **client-api**: NestJS API for client operations (port 3000)
+- **editor-api**: NestJS API for editor operations (port 3001)
+- **client-ui**: Static web application for clients (port 8080)
+- **editor-ui**: Static web application for editors (port 8081)
+
+### Troubleshooting
+
+**Port conflicts**: If you get port binding errors, make sure no other services are running on ports 3000, 3001, 8080, or 8081.
+
+**Build issues**: Make sure you've run the build command before Docker containerization:
+```sh
+npx nx run-many --target=build --all
+```
+
+**Dependencies issues**: If you encounter module not found errors, ensure npm install completed successfully before building.
+
 ## Generate a library
 
 ```sh

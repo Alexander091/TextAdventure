@@ -1,0 +1,77 @@
+# Git files
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Dependencies (except in dist folders)
+node_modules
+*/node_modules
+!packages/*/dist/node_modules
+
+# Build outputs (will be generated in container)
+dist
+*/dist
+!packages/*/dist
+build
+*/build
+out-tsc
+*/out-tsc
+
+# IDE and editor files
+.vscode
+.idea
+*.sublime-workspace
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like nyc
+coverage
+*/coverage
+
+# nyc test coverage
+.nyc_output
+
+# Nx cache
+.nx
+*/cache
+
+# Test outputs
+test-output
+
+# Cypress
+cypress/videos
+cypress/screenshots
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+tmp
+temp
+
+# Lock files (we want to keep these for consistency)
+# package-lock.json
+# yarn.lock
