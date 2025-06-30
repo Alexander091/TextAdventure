@@ -16,13 +16,7 @@
       "path": "./packages/text-adventure-editor-api"
     },
     {
-      "path": "./packages/text-adventure-client-ui-e2e"
-    },
-    {
       "path": "./packages/text-adventure-client-ui"
-    },
-    {
-      "path": "./packages/text-adventure-editor-ui-e2e"
     },
     {
       "path": "./packages/text-adventure-editor-ui"
