@@ -18,10 +18,6 @@
 - **text-adventure-client-ui**: Svelte frontend for client
 - **text-adventure-editor-ui**: Svelte frontend for editor
 
-### E2E Test Projects
-
-- Each app has a corresponding `*-e2e` project for end-to-end testing (Cypress/Jest).
-
 ### Libraries
 
 - **libs/database**: Shared database logic (likely for both APIs)
@@ -29,7 +25,7 @@
 ## Tooling & Best Practices
 
 - **TypeScript**: All projects use TypeScript, with shared configs (`tsconfig.base.json`)
-- **Testing**: Jest for unit tests, Cypress for E2E
+- **Testing**: Jest for unit tests
 - **Linting**: ESLint, Prettier
 - **Build Tools**: Vite (for Svelte), Webpack (for APIs), SWC for fast builds
 - **Svelte**: Used for UI projects
